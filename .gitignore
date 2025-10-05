@@ -24,8 +24,10 @@ frontend/.yarn/*
 frontend/next-env.d.ts
 frontend/*.tsbuildinfo
 frontend/.env*
+frontend/.next
 
 # ===== Backend (Express or Node.js) =====
 backend/node_modules/
 backend/dist/
 backend/.env
+.next/
