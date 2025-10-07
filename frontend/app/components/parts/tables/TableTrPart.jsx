@@ -1,7 +1,7 @@
 import Image from "next/image"
 import RemoveFromCartButtonPart from "../buttons/RemoveFromCartButtonPart"
 import QuantityPart from "../QuantityPart"
-const TableTrCom = ({item,setisloading,Loading}) => {
+const TableTrCom = ({item,setisloading,Loading,setmycart}) => {
   return (
        <tr>
             <td className="px-6 py-4 text-center">
@@ -9,8 +9,8 @@ const TableTrCom = ({item,setisloading,Loading}) => {
             </td>
             <td className="px-6 py-4 text-center text-2xl">{item.productId.name}</td>
             <td className="px-6 py-4 text-center text-2xl">${item.productId.price * item.quantity}</td>
-            <QuantityPart item={item} Loading={Loading} setisloading={setisloading}/>
-            <td className="px-6 py-4 text-center text-2xl "><RemoveFromCartButtonPart Loading={Loading} setisloading={setisloading} itemId={item.productId._id}/></td>
+            <QuantityPart setmycart={setmycart} item={item} Loading={Loading} setisloading={setisloading}/>
+            <td className="px-6 py-4 text-center text-2xl "><RemoveFromCartButtonPart setmycart={setmycart} Loading={Loading} setisloading={setisloading} itemId={item.productId._id}/></td>
         </tr>
   )
 }

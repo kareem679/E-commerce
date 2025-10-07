@@ -1,6 +1,6 @@
 import CardsCom from "@/app/components/CardsCom"
 import HeroCom from "@/app/components/HeroCom"
-import Checklogin from "@/app/components/check/Checklogin"
+
 
 const fetching = async () =>{
   try{
@@ -24,7 +24,7 @@ const page = async  () => {
   const res = await fetching()
   return (
     <div className="space-y-10">
-      <Checklogin/>
+
       <HeroCom title="#Products"/>
       <CardsCom res={res} /> 
     </div>

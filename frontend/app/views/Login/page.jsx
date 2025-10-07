@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 
 import FormInputLoginpart from "@/app/components/parts/forms/FormInputLoginpart"
 import Login from "@/app/views/Login/Login"
-import Checklogin from "@/app/components/check/Checklogin"
+
 
 const page = () => {
 
@@ -40,7 +40,7 @@ const page = () => {
   
   return (
     <>
-    <Checklogin/>
+    
     {isloading ? (
       <p className="h-screen grid place-items-center text-3xl font-bold">Loading.....</p>
     ):(

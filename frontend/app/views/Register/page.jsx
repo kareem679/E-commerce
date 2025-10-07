@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import Checklogin from "@/app/components/check/Checklogin";
+
 import Register from "@/app/views/Register/Register";
 import Forminputpart from "@/app/components/parts/forms/Forminputpart";
 
@@ -50,7 +50,7 @@ export default function Home() {
 
   return (  
     <>
-    <Checklogin/>
+    
     {isloading ? (
       <p className="h-screen grid place-items-center text-3xl font-bold">Loading.....</p>
     ):(

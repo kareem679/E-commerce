@@ -66,7 +66,7 @@ const ShowOrder = async (req,res)=>{
 // admins only
 const GetAllOrder = async(req,res)=>{
     try{
-        const AllOrders = await Order.find()
+        const AllOrders = await Order.find().populate("products.productId")
      
         if(!AllOrders || AllOrders.length === 0){
             return res.status(404).json({msg:"Orders collection is empty"})

@@ -50,7 +50,7 @@ const AddToCart = async ({ productId, quantity, currentToken }) => {
       data = await res.json();
 
       if (!res.ok) {
-        return { success: false, msg: data.msg || "Add to cart failed" };
+        return { success: false, msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong" };
       }
 
      
@@ -58,7 +58,7 @@ const AddToCart = async ({ productId, quantity, currentToken }) => {
     }
 
     if (!res.ok) {
-      return { success: false, msg: data.msg || "Add to cart failed" };
+      return { success: false, msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong" };
     }
 
     return { success: true, msg: "Created successfully" };

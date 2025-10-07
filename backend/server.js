@@ -21,10 +21,10 @@ server.use(express.json());
 server.use("/image", express.static(path.join(process.cwd(), "image")));
 server.use(cors({
     origin: "http://localhost:3000", 
-    credentials: true // عشان يسمح بالـ cookies
+    credentials: true 
 }));
 
-// Connect MongoDB
+
 
 
 configdb();
@@ -35,7 +35,7 @@ server.use("/api/products",productsRoutes)
 server.use("/api/cart",cartRoutes)
 server.use("/api/orders",orderRoutes)
 
-// Catch all route (optional)
+
 server.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });

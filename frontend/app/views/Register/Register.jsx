@@ -13,7 +13,7 @@ const Register = async ({name,email,password}) => {
         })
         const data = await res.json()
         if(!res.ok){
-            return {success: false, msg:data.msg}
+            return { success: false, msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong" };
         }else{
             localStorage.setItem("user", JSON.stringify(data));
             return {success: true, msg:"Register successfully"}

@@ -3,23 +3,23 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const SwiperCom = () => {
-  const slides = [
-    {
-      src: "/img1.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, accusamus!"
-    },
-    {
-      src: "/img2.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, accusamus!"
-    },
-    {
-      src: "/img3.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, accusamus!"
-    }
-  ];
+const slides = [
+  {
+    src: "/img1.jpg",
+    title: "Explore the Latest Gear",
+    desc: "Discover our newest collection of gadgets and accessories, crafted for your lifestyle."
+  },
+  {
+    src: "/img2.jpg",
+    title: "Premium Quality Products",
+    desc: "High-quality materials, designed for durability and style."
+  },
+  {
+    src: "/img3.jpg",
+    title: "Fast & Secure Delivery",
+    desc: "Get your orders delivered to your doorstep with speed and safety."
+  }
+];
 
   const [current, setCurrent] = useState(0);
 

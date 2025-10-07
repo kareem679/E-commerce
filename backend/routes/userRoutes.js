@@ -8,7 +8,7 @@ const {register,logout,login,refreshTokenHandler,} = require("../controllers/use
 
 const router = express.Router();
 
-// Register
+
 router.post("/register",
   [
     body("name")
@@ -42,7 +42,7 @@ router.post("/register",
   register
 );
 
-// Login
+
 router.post("/login",
   [
     body("email")
@@ -63,10 +63,10 @@ router.post("/login",
   login
 );
 
-// Logout
+
 router.post("/logout", authMiddleware, logout);
 
-// Refresh Token
+
 router.post("/refreshToken", refreshTokenHandler);
 
 module.exports = router;
