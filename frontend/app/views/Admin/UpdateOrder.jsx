@@ -1,4 +1,4 @@
-const UpdateOrder = async ({ Order_Id,status }) => {
+const UpdateOrder = async ({ Order_Id, status }) => {
   const accessToken = JSON.parse(localStorage.getItem("user"))?.accessToken;
   let res = await fetch(
     `http://localhost:5000/api/orders/ChangeStatus/${Order_Id}`,
@@ -9,7 +9,7 @@ const UpdateOrder = async ({ Order_Id,status }) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${accessToken}`,
       },
-      body:JSON.stringify({status})
+      body: JSON.stringify({ status }),
     }
   );
   let data = await res.json();
@@ -39,7 +39,7 @@ const UpdateOrder = async ({ Order_Id,status }) => {
             "Content-Type": "application/json",
             Authorization: `Bearer ${RefData.accessToken}`,
           },
-          body:JSON.stringify({status})
+          body: JSON.stringify({ status }),
         }
       );
 
@@ -53,10 +53,12 @@ const UpdateOrder = async ({ Order_Id,status }) => {
     }
   }
   if (res.ok) {
-    return { success: false, msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong" };
+    return { success: true, msg: data?.msg || "Order updated successfully" };
   } else {
-    return { success: false, msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong" };
-
+    return {
+      success: false,
+      msg: data?.errors?.[0]?.msg || data?.msg || "Something went wrong",
+    };
   }
 };
 

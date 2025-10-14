@@ -5,7 +5,7 @@ const TableTrCom = ({item,setisloading,Loading,setmycart}) => {
   return (
        <tr>
             <td className="px-6 py-4 text-center">
-              <Image src={`http://localhost:5000/${item.productId.image}`} alt="1234" width={200} height={200} className="mx-auto"/>
+              <Image src={`http://localhost:5000/${item.productId.image}`} alt="1234" width={200} height={200} className="mx-auto rounded-md"/>
             </td>
             <td className="px-6 py-4 text-center text-2xl">{item.productId.name}</td>
             <td className="px-6 py-4 text-center text-2xl">${item.productId.price * item.quantity}</td>

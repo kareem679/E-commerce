@@ -82,7 +82,7 @@ const login = async (req,res)=>{
         if(!user){
             return res.status(400).json({msg: "Wrong Email"})
         }
-        const ismatch = bcrypt.compare(String(password),user.password)
+        const ismatch = await bcrypt.compare(String(password),user.password)
         if(!ismatch){
             return res.status(400).json({msg: "Wrong password"})
         }

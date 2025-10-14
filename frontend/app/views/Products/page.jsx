@@ -1,3 +1,4 @@
+"use server"
 import CardsCom from "@/app/components/CardsCom"
 import HeroCom from "@/app/components/HeroCom"
 
