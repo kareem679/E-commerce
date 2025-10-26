@@ -1,4 +1,6 @@
-# Dependencies
+# -----------------
+# Frontend (Next.js / React)
+# -----------------
 /frontend/node_modules
 /frontend/.pnp
 /frontend/.pnp.*
@@ -8,69 +10,42 @@
 !/frontend/.yarn/releases
 !/frontend/.yarn/versions
 
-# Testing
 /frontend/coverage
-
-# Next.js
 /frontend/.next/
 /frontend/out/
-
-# Production
 /frontend/build
 
-# Misc
 /frontend/.DS_Store
 /frontend/*.pem
-
-# Debug
 /frontend/npm-debug.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
 /frontend/.pnpm-debug.log*
 
-# Env files
 /frontend/.env*
-
-# Vercel
 /frontend/.vercel
-
-# TypeScript
 /frontend/*.tsbuildinfo
 /frontend/next-env.d.ts
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# -----------------
+# Backend (Laravel)
+# -----------------
 /backend/node_modules
-/backend/public/build
-/backend/public/hot
-/backend/public/storage
-/backend/storage/*.key
 /backend/vendor
-/backend.env
-/backend.env.backup
-/backend.env.production
-/backend.phpunit.result.cache
-/backendHomestead.json
-/backendHomestead.yaml
-/backendauth.json
-/backendnpm-debug.log
-/backendyarn-error.log
-/backend/.fleet
+/backend/.env*
+/backend/storage/*
+!/backend/storage/.gitignore
+/backend/public/build/
+/backend/public/hot/
+/backend/public/storage/
+/backend/bootstrap/cache/
 /backend/.idea
 /backend/.vscode
+/backend/.fleet
+
+/backend/npm-debug.log*
+/backend/yarn-error.log*
+/backend/phpunit.result.cache
+/backend/Homestead.json
+/backend/Homestead.yaml
+/backend/auth.json
