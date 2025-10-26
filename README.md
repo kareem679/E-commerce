@@ -23,13 +23,10 @@ before start check if you have
 cd backend
 
 
-
-
 2- composer install
 
-3- cp .env.example .env
 
-4- change file .env with your DB information
+3- change file .env with your DB information
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -38,7 +35,7 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
 
-5- command
+4- command
 php artisan migrate --seed
 php artisan serve
 

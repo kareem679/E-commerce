@@ -46,9 +46,7 @@ const NavCom = () => {
               <li>
                 <Link href="/views/Admin/ManagePanel" className="text-lg font-medium hover:text-teal-200 transition-colors">Admin Panel</Link>
               </li>
-              <li>
-                <Link href="/views/Admin/ManageProducts" className="text-lg font-medium hover:text-teal-200 transition-colors">Manage Products</Link>
-              </li>
+
             </>
           )}
 
